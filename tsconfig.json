@@ -1,0 +1,109 @@
+{
+  "compilerOptions": {
+    /* Xem thêm tại https://aka.ms/tsconfig để hiểu rõ hơn về file này */
+
+    /* Dự án */
+    // "incremental": true,                              /* Lưu các file .tsbuildinfo để cho phép biên dịch gia tăng của dự án. */
+    // "composite": true,                                /* Bật các ràng buộc cho phép một dự án TypeScript được sử dụng với project references. */
+    // "tsBuildInfoFile": "./.tsbuildinfo",              /* Chỉ định đường dẫn đến file .tsbuildinfo cho biên dịch gia tăng. */
+    // "disableSourceOfProjectReferenceRedirect": true,  /* Tắt ưu tiên sử dụng file nguồn thay vì file khai báo khi tham chiếu đến các dự án composite. */
+    // "disableSolutionSearching": true,                 /* Loại bỏ dự án khỏi việc kiểm tra tham chiếu nhiều dự án khi đang chỉnh sửa. */
+    // "disableReferencedProjectLoad": true,             /* Giảm số lượng dự án được load tự động bởi TypeScript. */
+
+    /* Ngôn ngữ và môi trường */
+    "target": "es2016",                                  /* Đặt phiên bản JavaScript được xuất ra và bao gồm các file khai báo thư viện tương thích. */
+    // "lib": [],                                        /* Chỉ định tập hợp các file khai báo thư viện mô tả môi trường runtime mục tiêu. */
+    // "jsx": "preserve",                                /* Chỉ định JSX được biên dịch thành dạng nào. */
+    // "experimentalDecorators": true,                   /* Bật hỗ trợ thử nghiệm cho decorators cũ. */
+    // "emitDecoratorMetadata": true,                    /* Xuất metadata thiết kế cho các khai báo có decorator. */
+    // "jsxFactory": "",                                 /* Xác định hàm factory JSX được sử dụng, ví dụ 'React.createElement'. */
+    // "jsxFragmentFactory": "",                         /* Xác định tham chiếu Fragment dùng cho JSX fragment. */
+    // "jsxImportSource": "",                            /* Chỉ định module được dùng để import hàm JSX khi sử dụng 'jsx: react-jsx*'. */
+    // "reactNamespace": "",                             /* Xác định object được gọi cho 'createElement'. Chỉ áp dụng khi target 'react'. */
+    // "noLib": true,                                    /* Tắt việc include các file thư viện mặc định như lib.d.ts. */
+    // "useDefineForClassFields": true,                  /* Xuất các trường class tuân theo chuẩn ECMAScript. */
+    // "moduleDetection": "auto",                        /* Điều khiển phương pháp phát hiện file JS dạng module. */
+
+    /* Module */
+    "module": "commonjs",                                /* Chỉ định loại module được tạo ra khi biên dịch. */
+    // "rootDir": "./",                                  /* Chỉ định thư mục gốc chứa source code. */
+    // "moduleResolution": "node10",                     /* Xác định cách TypeScript tìm file từ tên module. */
+    // "baseUrl": "./",                                  /* Thư mục gốc để resolve các module không phải relative. */
+    // "paths": {},                                      /* Đặt alias đường dẫn cho import. */
+    // "rootDirs": [],                                   /* Cho phép nhiều thư mục được coi như một khi resolve module. */
+    // "typeRoots": [],                                  /* Chỉ định nhiều thư mục hoạt động như './node_modules/@types'. */
+    // "types": [],                                      /* Chỉ định các gói type được include mà không cần import trong source. */
+    // "allowUmdGlobalAccess": true,                     /* Cho phép truy cập UMD globals từ các module. */
+    // "moduleSuffixes": [],                             /* Danh sách hậu tố file để tìm khi resolve module. */
+    // "allowImportingTsExtensions": true,               /* Cho phép import với đuôi .ts (cần moduleResolution: bundler). */
+    // "resolvePackageJsonExports": true,                /* Sử dụng trường 'exports' trong package.json khi resolve. */
+    // "resolvePackageJsonImports": true,                /* Sử dụng trường 'imports' trong package.json khi resolve. */
+    // "customConditions": [],                           /* Thêm các điều kiện tùy chỉnh khi resolve import. */
+    // "resolveJsonModule": true,                        /* Cho phép import file .json. */
+    // "allowArbitraryExtensions": true,                 /* Cho phép import file với bất kỳ đuôi nào, nếu có file khai báo. */
+    // "noResolve": true,                                /* Ngăn import/require mở rộng thêm số lượng file của dự án. */
+
+    /* Hỗ trợ JavaScript */
+    // "allowJs": true,                                  /* Cho phép file .js là một phần của chương trình. */
+    // "checkJs": true,                                  /* Bật kiểm tra lỗi trong file JavaScript. */
+    // "maxNodeModuleJsDepth": 1,                        /* Độ sâu tối đa khi kiểm tra file JS trong node_modules. */
+
+    /* Xuất ra */
+    // "declaration": true,                              /* Tạo file .d.ts từ code TS/JS trong dự án. */
+    // "declarationMap": true,                           /* Tạo sourcemap cho file d.ts. */
+    // "emitDeclarationOnly": true,                      /* Chỉ xuất ra d.ts mà không tạo JS. */
+    // "sourceMap": true,                                /* Tạo sourcemap cho JS đã xuất ra. */
+    // "inlineSourceMap": true,                          /* Nhúng sourcemap vào trong file JS đã xuất ra. */
+    // "outFile": "./",                                  /* Gộp toàn bộ đầu ra thành một file JS duy nhất. */
+    "outDir": "./build",                                /* Thư mục chứa toàn bộ file sau khi biên dịch. */
+    // "removeComments": true,                           /* Xóa comment khi biên dịch. */
+    // "noEmit": true,                                   /* Không tạo file khi biên dịch. */
+    // "importHelpers": true,                            /* Import helper từ tslib thay vì nhúng từng file. */
+    // "importsNotUsedAsValues": "remove",               /* Quy định cách xử lý import chỉ dùng cho type. */
+    // "downlevelIteration": true,                       /* Xuất ra JS tương thích hơn nhưng ít hiệu năng cho vòng lặp. */
+    // "sourceRoot": "",                                 /* Đường dẫn gốc để debugger tìm source code. */
+    // "mapRoot": "",                                    /* Đường dẫn cho debugger tìm map files. */
+    // "inlineSources": true,                            /* Nhúng source code vào trong sourcemap. */
+    // "emitBOM": true,                                  /* Xuất BOM (Byte Order Mark) ở đầu file. */
+    // "newLine": "crlf",                                /* Đặt ký tự xuống dòng cho file xuất ra. */
+    // "stripInternal": true,                            /* Không xuất các khai báo có '@internal'. */
+    // "noEmitHelpers": true,                            /* Không tạo các helper function trong output. */
+    // "noEmitOnError": true,                            /* Không xuất file nếu có lỗi type. */
+    // "preserveConstEnums": true,                       /* Không xóa const enum trong code biên dịch. */
+    // "declarationDir": "./",                           /* Thư mục chứa file .d.ts được tạo. */
+    // "preserveValueImports": true,                     /* Giữ lại import giá trị không dùng trong output JS. */
+
+    /* Ràng buộc tương thích */
+    // "isolatedModules": true,                          /* Đảm bảo mỗi file có thể biên dịch độc lập. */
+    // "verbatimModuleSyntax": true,                     /* Giữ nguyên import/export không phải type-only trong output theo module. */
+    // "allowSyntheticDefaultImports": true,             /* Cho phép 'import x from y' khi module không có default export. */
+    "esModuleInterop": true,                             /* Xuất thêm JS để dễ dàng import module CommonJS. */
+    // "preserveSymlinks": true,                         /* Không resolve symlink về realpath. */
+    "forceConsistentCasingInFileNames": true,            /* Bắt buộc đúng kiểu chữ trong import. */
+
+    /* Kiểm tra kiểu */
+    "strict": false,                                     /* Bật toàn bộ chế độ kiểm tra kiểu nghiêm ngặt. */
+    // "noImplicitAny": true,                            /* Báo lỗi khi type mặc định là any. */
+    // "strictNullChecks": true,                         /* Xem xét null và undefined khi kiểm tra type. */
+    // "strictFunctionTypes": true,                      /* Kiểm tra tham số và giá trị trả về của hàm. */
+    // "strictBindCallApply": true,                      /* Kiểm tra tham số khi gọi bind/call/apply. */
+    // "strictPropertyInitialization": true,             /* Kiểm tra property trong class đã được khởi tạo. */
+    // "noImplicitThis": true,                           /* Báo lỗi khi this có type any. */
+    // "useUnknownInCatchVariables": true,               /* Đặt biến catch mặc định là unknown thay vì any. */
+    // "alwaysStrict": true,                             /* Đảm bảo luôn xuất 'use strict'. */
+    // "noUnusedLocals": true,                           /* Báo lỗi khi biến local không được dùng. */
+    // "noUnusedParameters": true,                       /* Báo lỗi khi tham số hàm không được dùng. */
+    // "exactOptionalPropertyTypes": true,               /* Hiểu đúng type optional mà không thêm undefined. */
+    // "noImplicitReturns": true,                        /* Báo lỗi khi function không return ở mọi nhánh. */
+    // "noFallthroughCasesInSwitch": true,               /* Báo lỗi khi switch không có break. */
+    // "noUncheckedIndexedAccess": true,                 /* Thêm undefined khi truy cập qua index. */
+    // "noImplicitOverride": true,                       /* Bắt buộc dùng từ khóa override khi ghi đè. */
+    // "noPropertyAccessFromIndexSignature": true,       /* Bắt buộc dùng truy cập qua index cho type dạng index signature. */
+    // "allowUnusedLabels": true,                        /* Không báo lỗi khi nhãn không dùng. */
+    // "allowUnreachableCode": true,                     /* Không báo lỗi khi code không thể tới được. */
+
+    /* Hoàn thiện */
+    // "skipDefaultLibCheck": true,                      /* Bỏ qua kiểm tra type của file lib mặc định. */
+    "skipLibCheck": true                                /* Bỏ qua kiểm tra type cho tất cả file .d.ts. */
+  }
+}
