@@ -7,6 +7,7 @@ import { BadRequestException } from "../exceptions/bad_requests";
 import { ErrorCode } from "../exceptions/root";
 import { UnprocessableEntityException } from "../exceptions/validation";
 import { SignupSchema } from "../schema/users";
+import { NotFoundException } from "../exceptions/not_found";
 
 export const login = async (req: Request, res: Response) => {
   const { email, password } = req.body;
@@ -18,14 +19,14 @@ export const login = async (req: Request, res: Response) => {
   });
 
   if (!user) {
-    throw new Error("User does not exist");
+    throw new NotFoundException('User not found', ErrorCode.USER_NOT_FOUND);
   }
   if (!compareSync(password, user.password)) {
-    throw new Error("Invalid password");
+    throw new BadRequestException('Incorrect password', ErrorCode.INCORRECT_PASSWORD);
   }
   const token = jwt.sign(
     {
-      email: user.email
+      userId: user.id
     },
      JWT_SECRET
   );
@@ -59,3 +60,7 @@ export const signup = async (req: Request, res: Response, next: NextFunction) =>
     next(new UnprocessableEntityException('Unprocessable Entity', ErrorCode.UNPROCESSABLE_ENTITY, error?.issues) );
   }
 };
+  
+export const me = async (req: Request, res:Response) => {
+    res.json(req.user)
+}

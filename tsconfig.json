@@ -31,7 +31,10 @@
     // "baseUrl": "./",                                  /* Thư mục gốc để resolve các module không phải relative. */
     // "paths": {},                                      /* Đặt alias đường dẫn cho import. */
     // "rootDirs": [],                                   /* Cho phép nhiều thư mục được coi như một khi resolve module. */
-    // "typeRoots": [],                                  /* Chỉ định nhiều thư mục hoạt động như './node_modules/@types'. */
+    "typeRoots": [
+      "./src/types",       // 👈 thêm dòng này
+      "./node_modules/@types"
+    ],                                  /* Chỉ định nhiều thư mục hoạt động như './node_modules/@types'. */
     // "types": [],                                      /* Chỉ định các gói type được include mà không cần import trong source. */
     // "allowUmdGlobalAccess": true,                     /* Cho phép truy cập UMD globals từ các module. */
     // "moduleSuffixes": [],                             /* Danh sách hậu tố file để tìm khi resolve module. */
