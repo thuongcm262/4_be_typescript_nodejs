@@ -160,7 +160,7 @@ export const listAllOrders = async(res: Response, req: Request)=>{
     res.json(orders)
 }
 
-export const changeStatus = async(res: Response, req: Request)=>{
+export const changeStatus = async(req: Request, res: Response )=>{
     // const statusBody = OrderStatusSchema.parse(req.body.status)
 
     return await prismaClient.$transaction(async(tx)=>{
@@ -182,7 +182,7 @@ export const changeStatus = async(res: Response, req: Request)=>{
     })
 }
 
-export const listUserOrder = async(res: Response, req: Request)=>{
+export const listUserOrder = async(req: Request,res: Response)=>{
     let whereClause: any = {
         userId: +req.params.id
     }

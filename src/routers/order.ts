@@ -11,6 +11,7 @@ orderRouter.get('/',[authMiddleware], errorHandler(listOrders))
 orderRouter.put('/:id/cancel', [authMiddleware], errorHandler(cancelOrder))
 orderRouter.get('/index',[authMiddleware, adminMiddleware], errorHandler(listAllOrders))
 orderRouter.get('/users/:id',[authMiddleware, adminMiddleware], errorHandler(listUserOrder))
+orderRouter.get('/users/:id/:status',[authMiddleware, adminMiddleware], errorHandler(listUserOrder))
 orderRouter.put('/:id/status',[authMiddleware, adminMiddleware], errorHandler(changeStatus))
 orderRouter.get('/:id',[authMiddleware], errorHandler(getOrderById))
 
