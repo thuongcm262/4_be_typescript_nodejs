@@ -5,6 +5,7 @@ export const errorMiddleware = (error: HttpException, req: Request, res: Respons
     res.status(error.statusCode || 500).json({
         message: error.message || 'Something went wrong',
         errorCode: error.errorCode || null,
+        errorStatus: error.statusCode,
         errors: error.errors || null,
     });
 };

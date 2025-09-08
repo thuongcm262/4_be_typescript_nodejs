@@ -13,9 +13,11 @@ export const errorHandler = (method: Function) => {
             if( error instanceof HttpException) {
                 exception = error;
             } else {
+                
                 if( error instanceof ZodError) {
                     exception = new BadRequestException('Unprocessable entity.', ErrorCode.UNPROCESSABLE_ENTITY, error)
                 } else {
+                    console.log(error)
                     exception = new InternalException('Internal Server Error', ErrorCode.INTERNAL_SERVER_ERROR, 500, error);
                 }
             }

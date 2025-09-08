@@ -84,5 +84,5 @@ export const getProductById = async (req: Request, res: Response)=>{
 }
 
 export const searchProducts = async (req: Request, res: Response)=>{
-
+    // PostgreSql không hỗ trợ @@fulltext
 }

@@ -23,7 +23,23 @@ export const prismaClient = new PrismaClient({
         return query(args);
       }
     }
-  }
+  },
+  result:{
+        address:{
+            formattedAddress: {
+                needs: {
+                    lineOne: true,
+                    lineTwo: true,
+                    city: true,
+                    country: true,
+                    pinCode: true
+                },
+                compute: (addr) => {
+                    return `${addr.lineOne}, ${addr.lineTwo}, ${addr.city}, ${addr.country}-${addr.pinCode}`
+                }
+            }
+        }
+    }
 });
 
 app.listen(PORT, () => {
